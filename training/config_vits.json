@@ -1,0 +1,30 @@
+{
+  "audio": {
+    "sample_rate": 22050,
+    "win_length": 1024,
+    "hop_length": 256,
+    "n_fft": 1024,
+    "num_mels": 80,
+    "mel_fmin": 0,
+    "mel_fmax": 8000
+  },
+  "model": "vits",
+  "batch_size": 32,
+  "eval_batch_size": 16,
+  "num_loader_workers": 4,
+  "run_eval": true,
+  "epochs": 200,
+  "lr": 0.0002,
+  "grad_clip": 1.0,
+  "compute_input_seq_cache": true,
+  "output_path": "out",
+  "datasets": [
+    {
+      "formatter": "ljspeech",
+      "path": "data",
+      "meta_file_train": "metadata_train.csv",
+      "meta_file_val": "metadata_val.csv",
+      "language": "en"
+    }
+  ]
+}
