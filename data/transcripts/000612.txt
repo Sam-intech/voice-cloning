@@ -1,0 +1,2 @@
+If my wifi is on, I don't want it to send
+You can listen to it before you send it
