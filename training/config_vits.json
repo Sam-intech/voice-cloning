@@ -10,7 +10,7 @@
   "eval_interval": 1000,
   "save_n_checkpoints": 5,
   "save_checkpoints": true,
-  "save_best_after": 0,
+  "save_best_after": 2000,
   "run_eval": true,
   "use_eval_loss": true,
   "test_delay_epochs": 0,
@@ -40,6 +40,7 @@
   "audio": {
     "fft_size": 1024,
     "sample_rate": 22050,
+    "n_fft": 1024,
     "win_length": 1024,
     "hop_length": 256,
     "num_mels": 80,
