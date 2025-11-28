@@ -22,7 +22,7 @@
   "batch_size": 8,
   "eval_batch_size": 8,
   "grad_clip": [5.0, 5.0],
-  "lr": 0.0002,
+  "lr": 0.0001,
   "optimizer": "AdamW",
   "optimizer_params": { "betas": [0.8, 0.99], "eps": 1e-9, "weight_decay": 0.01 },
   "use_grad_scaler": false,
