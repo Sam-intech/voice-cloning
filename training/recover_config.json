@@ -1,0 +1,48 @@
+{
+  "output_path": "out",
+  "save_step": 1000,
+  "save_n_checkpoints": 5,
+  "save_checkpoints": true,
+  "save_best_after": 2000,
+  "print_step": 1,
+  "eval_interval": 500,
+
+  "mixed_precision": false,
+  "precision": "float32",
+
+  "epochs": 0,
+  "batch_size": 2, 
+  "eval_batch_size": 2,
+  "num_loader_workers": 0,
+  "num_eval_loader_workers": 0,
+  "grad_clip": [5.0, 5.0],
+
+  "scheduler_after_epoch": true,
+
+  "optimizer": "Adam",
+  "optimizer_params": { "betas": [0.9, 0.999], "eps": 1e-8 },
+  "lr_gen": 0.0001,
+  "lr_disc": 0.0001,
+  "lr_scheduler_gen": "ExponentialLR",
+  "lr_scheduler_gen_params": { "gamma": 1.0, "last_epoch": -1 },
+  "lr_scheduler_disc": "ExponentialLR",
+  "lr_scheduler_disc_params": { "gamma": 1.0, "last_epoch": -1 },
+
+  "model": "vits",
+  "audio": { "sample_rate": 22050, "win_length": 1024, "hop_length": 256, "n_fft": 1024, "num_mels": 80, "mel_fmin": 0, "mel_fmax": 8000 },
+
+  "use_phonemes": false,
+  "compute_input_seq_cache": false,
+
+  "datasets": [
+    {
+      "formatter": "ljspeech",
+      "path": "data",
+      "meta_file_train": "metadata_train.csv",
+      "meta_file_val": "metadata_val.csv",
+      "language": "en-gb"
+    }
+  ],
+
+  "restore_path": "out/-October-20-2025_03+41PM-e40d9c2/checkpoint_14001.pth"
+}
